@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function ToDoList() {
 
-    const [tasks, setTasks] = useState(["Eat Breakfast", "Watch something", "Go to school"]);
+    const [tasks, setTasks] = useState(["Example Task", "Do exercise", "Budget"]);
     const [newTask, setNewTask] = useState("");
 
     function handleInputChange(event) {
@@ -38,7 +38,7 @@ function ToDoList() {
         if (index < tasks.length - 1) {
             const updatedTasks = [...tasks];
             [updatedTasks[index], updatedTasks[index + 1]] =
-                [updatedTasks[index - 1], updatedTasks[index]];
+            [updatedTasks[index + 1], updatedTasks[index]];
             setTasks(updatedTasks);
         }
     }
